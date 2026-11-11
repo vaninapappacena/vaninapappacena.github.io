@@ -111,7 +111,7 @@ body {
   width: 100%;
   height: 100%;
   fill: none;
-  stroke: #2c492d; 
+  stroke: #2c492d;
   stroke-width: 0.25;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -199,7 +199,7 @@ h3 {
 
 h1 {
   font-family: "Newsreader", Georgia, serif;
-  font-size: clamp(2rem, 5vw, 3.2rem); /* Mínimo: 32px | Máximo: 51px */
+  font-size: clamp(2.5rem, 7vw, 4.8rem);
   max-width: 13ch;
   font-weight: 500;
   letter-spacing: -0.03em;
@@ -207,7 +207,7 @@ h1 {
 
 h2 {
   font-family: "Newsreader", Georgia, serif;
-  font-size: clamp(1.5rem, 3.5vw, 2.2rem); /* Mínimo: 24px | Máximo: 35px */
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 500;
   letter-spacing: -0.02em;
 }
@@ -820,9 +820,9 @@ h3 {
 }
 
 .case-summary h2,
-/* .case-section h2 {
+.case-section h2 {
   max-width: 16ch;
-}*/
+}
 
 .case-summary p,
 .fact-card p,
@@ -877,13 +877,13 @@ h3 {
 
 .gallery-card figcaption {
   font-size: 0.95rem;
-  color: var(--text);
+  color: var(--muted);
   padding-top: 0.75rem;
 }
 
 .case-facts {
   display: grid;
-  /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 1.5rem;
 }
@@ -1143,109 +1143,5 @@ h3 {
   .text-link {
     width: 100%;
     justify-content: center;
-  }
-}
-
-/* ==========================================================================
-   Case Text Blocks (Who this is for & Key learning)
-   ========================================================================== */
-
-/* Limita el ancho del texto para una lectura cómoda tipo editorial*/
-.section-alt .container {
-  max-width: 1000px;
-  margin: 0 auto;
-} 
-
-/* Tarjetas de texto plano */
-.case-text-block {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* Reset de margen superior para los títulos dentro del bloque */
-.case-text-block h3 {
-  margin-top: 0;
-  margin-bottom: 1.25rem;
-  font-family: "Newsreader", Georgia, serif;
-  font-size: 1.6rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  color: var(--text);
-}
-
-/* Estilo para las listas (Who this is for) */
-.case-text-block ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.case-text-block ul li {
-  font-size: 1.02rem;
-  line-height: 1.6;
-  color: var(--muted);
-  margin-bottom: 0.85rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-/* Viñeta sutil y elegante usando tus variables de diseño */
-.case-text-block ul li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.case-text-block ul li:last-child {
-  margin-bottom: 0;
-}
-
-/* Estilo para los párrafos (Key learning) */
-.case-text-block p {
-  font-size: 1.05rem;
-  line-height: 1.65;
-  color: var(--muted);
-  margin: 0;
-}
-
-/* Ajustes específicos para pantallas pequeñas */
-@media (max-width: 640px) {
-  .case-text-block {
-    padding: 1.4rem;
-    border-radius: 14px;
-    margin-bottom: 1.5rem;
-  }
-  
-  .case-text-block h3 {
-    font-size: 1.35rem;
-    margin-bottom: 1rem;
-  }
-  
-  .case-text-block p,
-  .case-text-block ul li {
-    font-size: 0.98rem;
-  }
-}
-
-/* ==========================================================================
-   Ajustes Finales para Casos de Estudio (Ponelo abajo de todo)
-   ========================================================================== */
-
-/* Libera el límite de 13 caracteres solo en las páginas de casos */
-.case-page .case-hero h1 {
-  max-width: 100%;
-}
-
-/* Le da un poco más de aire a la grilla del hero en pantallas grandes */
-@media (min-width: 901px) {
-  .case-page .case-hero {
-    grid-template-columns: 1.2fr 0.8fr; /* El texto gana más espacio que la imagen */
-    gap: 4rem;
   }
 }
